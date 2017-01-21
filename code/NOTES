@@ -1,0 +1,6 @@
+NOTES
+
+## eslint rules
+- 0 - means off
+- 1 - warning
+- 2 - error (break the buld)
