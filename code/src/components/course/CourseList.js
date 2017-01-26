@@ -20,7 +20,6 @@ const CourseList = ({courses}) => {
                 )}
             </tbody>
         </table>
-         <button type="button" class="btn btn-default">Right</button>
         </div>
     );
 };
