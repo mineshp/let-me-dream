@@ -21,15 +21,20 @@ export default {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      jQuery: '../bootstrap/jquery-3.1.1.min.js',
+      $: '../bootstrap/jquery-3.1.1.min.js',
+      jquery: '../bootstrap/jquery-3.1.1.min.js'
+    })
   ],
   module: {
     loaders: [
       {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
       {test: /(\.css)$/, loaders: ['style', 'css']},
-      {test: /(\.scss)$/, loaders: ['style', 'scss']},
+      {test: /(\.scss)$/, loaders: ["style-loader", "css-loader", "sass-loader"]},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
-      {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
+      {test: /\.(woff|woff2)(\?\S*)?$/, loader: 'url?prefix=font/&limit=10000'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
     ]
