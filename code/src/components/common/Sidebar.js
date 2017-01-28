@@ -27,9 +27,32 @@ const Sidebar = ({loading}) => {
               <div className="menu_section">
                 <h3>General</h3>
                 <ul className="nav side-menu">
-                  <li><IndexLink to="/" activeClassName="active"><i className="fa fa-home"></i>Home <span className="fa fa-chevron-down"></span></IndexLink>
+                  <li><IndexLink to="/" activeClassName="active"><i className="fa fa-home"></i> Home <span className="fa fa-chevron-down"></span></IndexLink>
                   </li>
-                  <li><Link to="/courses" activeClassName="active"><i className="fa fa-edit"></i>Courses<span className="fa fa-chevron-down"></span></Link>
+                  <li><Link to="/courses" activeClassName="active"><i className="fa fa-edit"></i> Courses <span className="fa fa-chevron-down"></span></Link>
+                  </li>
+                  <li><a><i className="fa fa-gift"></i> Engagement <span className="fa fa-chevron-down"></span></a>
+                    <ul className="nav child_menu">
+                      <li><a href="form.html">Guest List</a></li>
+                      <li><a href="form_advanced.html">Hall List</a></li>
+                      <li><a href="form_validation.html">Budget</a></li>
+                      <li><a href="form_validation.html">Misc</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i className="fa fa-heartbeat"></i> Wedding <span className="fa fa-chevron-down"></span></a>
+                    <ul className="nav child_menu">
+                      <li><a href="form.html">Guest List</a></li>
+                      <li><a href="form_advanced.html">Hall List</a></li>
+                      <li><a href="form_validation.html">Budget</a></li>
+                      <li><a href="form_validation.html">Misc</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i className="fa fa-cog"></i> Admin <span className="fa fa-chevron-down"></span></a>
+                    <ul className="nav child_menu">
+                      <li><a href="form.html">Manage Labels</a></li>
+                      <li><a href="form_advanced.html">Manage Users</a></li>
+                      <li><a href="form_validation.html">Manage Pages</a></li>
+                    </ul>
                   </li>
                 </ul>
               </div>

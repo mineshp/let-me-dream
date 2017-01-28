@@ -206,6 +206,7 @@ body .container.body .right_col {
 .nav-md .container.body .right_col {
   padding: 10px 20px 0;
   margin-left: 230px;
+  min-height: 774px;
 }
 .nav_title {
   width: 230px;
@@ -224,6 +225,7 @@ body .container.body .right_col {
   }
   .nav-md .container.body .right_col {
     width: 100%;
+    min-height: 774px;
     padding-right: 0
   }
   .right_col {
