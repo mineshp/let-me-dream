@@ -44,4 +44,24 @@ describe('Course Reducer', () => {
         expect(untouchedCourse.title).toEqual('A');
         expect(newState.length).toEqual(3);
     });
+
+    it('should load courses when passed LOAD_COURSES_SUCCESS', () => {
+        // ARRANGE
+        const initialState = [];
+
+        const courses = [
+            {title: 'A'},{title: 'B'},{title: 'C'}
+        ];
+
+        const action = actions.loadCoursesSuccess(courses);
+
+        // ACT
+        const newState = courseReducer(initialState, action);
+
+        // ASSERT
+        expect(newState.length).toEqual(3);
+        expect(newState[0].title).toEqual('A');
+        expect(newState[1].title).toEqual('B');
+        expect(newState[2].title).toEqual('C');
+    });
 });

@@ -56,4 +56,24 @@ describe('Async Actions', () => {
             done();
         });
     });
+
+    // it('should create a BEGIN_AJAX_CALL and CREATE_COURSE_SUCCESS when saving a new course', (done) => {
+    //     // ARRANGE
+    //     const expectedActions = [
+    //         { type: types.BEGIN_AJAX_CALL },
+    //         { type: types.CREATE_COURSE_SUCCESS, body: {id: 'new-course', title:'New Course', authorId:'John Doe'}}
+    //     ];
+
+    //     // ACT
+    //     const newCourse = {id: 'new-course', title:'New Course', authorId:'John Doe'};
+    //     const store = mockStore({course: newCourse}, expectedActions);
+
+    //     // ASSERT
+    //     store.dispatch(courseActions.saveCourse(newCourse)).then(() => {
+    //         const actions = store.getActions();
+    //         //expect(actions[0].type).toEqual(types.BEGIN_AJAX_CALL);
+    //         //expect(actions[1].type).toEqual(types.CREATE_COURSE_SUCCESS);
+    //         done();
+    //     });
+    // });
 });

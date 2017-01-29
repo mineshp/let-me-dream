@@ -24,4 +24,54 @@ describe('Store', () => {
 
         expect(actual).toEqual(expected);
     });
+
+    it('should handle updating courses', () => {
+        // ARRANGE
+        const courses = [
+            { id: 'first-course', title: 'First Course'},
+            { id: 'second-course', title: 'Second Course'}
+
+        ];
+        initialState.courses = courses;
+        const store = createStore(rootReducer, initialState);
+        const updatingExistingCourse = {
+            id: 'first-course', title: 'Last Course'
+        };
+
+        // ACT
+        const action = courseActions.updateCourseSuccess(updatingExistingCourse);
+        store.dispatch(action);
+
+        // ASSERT
+        const actual = store.getState().courses;
+        const expected = [
+            { id: 'second-course', title: 'Second Course'},
+            { id: 'first-course', title: 'Last Course'}
+        ];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('should handle loading courses', () => {
+        // ARRANGE
+        const courses = [
+            { id: 'first-course', title: 'First Course'},
+            { id: 'second-course', title: 'Second Course'}
+        ];
+        initialState.courses = courses;
+        const store = createStore(rootReducer, initialState);
+
+        // ACT
+        const action = courseActions.loadCoursesSuccess(courses);
+        store.dispatch(action);
+
+        // ASSERT
+        const actual = store.getState().courses;
+        const expected = [
+            { id: 'first-course', title: 'First Course'},
+            { id: 'second-course', title: 'Second Course'}
+        ];
+
+        expect(actual).toEqual(expected);
+    });
 });
