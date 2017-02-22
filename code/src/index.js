@@ -10,6 +10,7 @@ import {loadAuthors} from './actions/authorActions';
 
 import './styles/styles.css'; // Webpack can import CSS files too!
 import './bootstrap/bootstrap.min.js';
+import './js/custom.js';
 //import './bootstrap/gentelella.custom.min.js';
 import './styles/bootstrap.min.css';
 import './styles/custom.scss';

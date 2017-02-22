@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import Header from './common/Header';
 import TopNav from './common/TopNav';
 import Sidebar from './common/Sidebar';
+import Footer from './common/Footer';
 import {connect} from 'react-redux';
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
                 <div className="right_col" role="main">
                     {this.props.children}
                 </div>
+                <Footer />
             </div>
         );
     }
