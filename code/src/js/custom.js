@@ -4,7 +4,6 @@ function toggleSideNav() {
     // invert class to a new variable
     let newClass = bodyClass.contains('nav-md') ? 'nav-sm' : 'nav-md';
     // apply new class
-    console.log("NC", newClass);
     document.querySelector("body").className = newClass;
 }
 
